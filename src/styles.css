@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+.mb-10{
+  margin-bottom: 10px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh; /* Full viewport height */
+}
+

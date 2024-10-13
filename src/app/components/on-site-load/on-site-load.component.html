@@ -1,0 +1,27 @@
+@if (loading) {
+  <div class="spinner-container">
+    <p-progressSpinner ariaLabel="loading"></p-progressSpinner>
+  </div>
+}
+
+@if (!loading) {
+  <div class="card-container">
+    <p-card>
+      <div class="custom-header">
+        <div class="text-center">
+          <img [src]="configData.siteLogo" alt="Site Logo" class="site-logo" />
+        </div>
+        <div class="text-center">
+          <h6 class="fw-bold">{{ configData.siteTagLine }}</h6>
+        </div>
+      </div>
+      <div class="gap-3 button-group mb-10">
+        <button pButton label="Sign In" icon="pi pi-sign-in" (click)="onSignIn()" class="p-button-success"></button>
+        <button pButton label="Sign Up" icon="pi pi-user-plus" (click)="onSignUp()" class="p-button-secondary"></button>
+      </div>
+      <div>
+        <span class="fw-bold">Version {{ configData.productVersion }}</span>
+      </div>
+    </p-card>
+  </div>
+}
