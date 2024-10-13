@@ -7,6 +7,9 @@
 @if (!loading) {
   <div class="card-container">
     <p-card>
+      <div class="text-center text-danger">
+        <h4>{{ configData.maintenanceMsg}}</h4>
+      </div>
       <div class="custom-header">
         <div class="text-center">
           <img [src]="configData.siteLogo" alt="Site Logo" class="site-logo" />
@@ -16,8 +19,8 @@
         </div>
       </div>
       <div class="gap-3 button-group mb-10">
-        <button pButton label="Sign In" icon="pi pi-sign-in" (click)="onSignIn()" class="p-button-success"></button>
-        <button pButton label="Sign Up" icon="pi pi-user-plus" (click)="onSignUp()" class="p-button-secondary"></button>
+        <button [disabled]="configData.maintenanceMsg" pButton label="Sign In" icon="pi pi-sign-in" (click)="onSignIn()" class="p-button-success"></button>
+        <button [disabled]="configData.maintenanceMsg" pButton label="Sign Up" icon="pi pi-user-plus" (click)="onSignUp()" class="p-button-secondary"></button>
       </div>
       <div>
         <span class="fw-bold">Version {{ configData.productVersion }}</span>
