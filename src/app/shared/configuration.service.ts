@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 interface ConfigData {
   maintenanceTo: string | null;
@@ -24,7 +25,7 @@ interface ConfigResponse {
 })
 export class ConfigurationService {
 
-  private baseApiUrl = 'https://dev-tms-service-gateway.up.railway.app/api/configuration';
+  private baseApiUrl = `${environment.apiUrl}/api/configuration`;
 
   constructor(private http: HttpClient) {}
 
