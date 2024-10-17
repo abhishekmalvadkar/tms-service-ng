@@ -65,6 +65,7 @@
                 }
               ],
               "optimization": true,
+              "outputHashing": "all",
               "extractLicenses": false,
               "sourceMap": false
             }
