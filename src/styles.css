@@ -11,3 +11,29 @@
   height: 100vh; /* Full viewport height */
 }
 
+.form-input-gap{
+  margin-bottom: 30px;
+}
+
+.tms-btn{
+  background-color: #2C3E50;
+  color: #fff;
+}
+
+.button-group :focus{
+  box-shadow: none;
+  outline: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #2C3E50;
+  border-width: 2px;
+}
+
+input{
+  padding: 10px;
+}
+
+
+

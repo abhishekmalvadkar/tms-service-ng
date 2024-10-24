@@ -1,0 +1,27 @@
+/* center-card.component.css */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.create-account-card{
+  width: 40%;
+}
+
+.site-logo {
+  width: 50%;
+}
+
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-header{
+  margin-bottom: 40px;
+}
+

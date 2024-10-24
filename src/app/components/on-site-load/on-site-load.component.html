@@ -19,8 +19,8 @@
         </div>
       </div>
       <div class="gap-3 button-group mb-10">
-        <button [disabled]="configData.maintenanceMsg" pButton label="Sign In" icon="pi pi-sign-in" (click)="onSignIn()" class="p-button-success"></button>
-        <button [disabled]="configData.maintenanceMsg" pButton label="Sign Up" icon="pi pi-user-plus" (click)="onSignUp()" class="p-button-secondary"></button>
+        <button [disabled]="configData.maintenanceMsg" pButton label="Sign In" (click)="onSignIn()" class="tms-btn"></button>
+        <button [disabled]="configData.maintenanceMsg" pButton label="Sign Up" (click)="onSignUp()" class="tms-btn"></button>
       </div>
       <div>
         <span class="fw-bold">Version {{ configData.productVersion }}</span>
