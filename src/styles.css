@@ -18,6 +18,7 @@
 .tms-btn{
   background-color: #2C3E50;
   color: #fff;
+  border-color: #2C3E50;
 }
 
 .button-group :focus{
