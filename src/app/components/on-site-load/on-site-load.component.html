@@ -20,8 +20,8 @@
     </div>
     <div class="gap-3 button-group mb-10">
       <button [disabled]="configData.maintenanceMsg" pButton label="Sign In" (click)="onSignIn()"
-        class="tms-btn"></button>
-        <button [routerLink]="['/create-account']" [disabled]="configData.maintenanceMsg" pButton label="Sign Up" class="tms-btn"></button>
+        class="tms-btn-primary"></button>
+        <button [routerLink]="['/create-account']" [disabled]="configData.maintenanceMsg" pButton label="Sign Up" class="tms-btn-primary"></button>
     </div>
     <div>
       <span class="fw-bold">Version {{ configData.productVersion }}</span>

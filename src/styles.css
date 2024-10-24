@@ -15,11 +15,17 @@
   margin-bottom: 30px;
 }
 
-.tms-btn{
+.tms-btn-primary{
   background-color: #2C3E50;
   color: #fff;
   border-color: #2C3E50;
 }
+
+.tms-btn{
+  padding: 5px 18px;
+}
+
+
 
 .button-group :focus{
   box-shadow: none;
