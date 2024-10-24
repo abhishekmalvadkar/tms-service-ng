@@ -64,9 +64,10 @@
                   "with": "src/environments/environment.dev.ts"
                 }
               ],
-              "optimization": false,
+              "optimization": true,
+              "outputHashing": "all",
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": false
             }
           },
           "defaultConfiguration": "prod"
