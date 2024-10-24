@@ -3,11 +3,12 @@ import { ConfigurationService } from '../../shared/configuration.service';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-on-site-load',
   standalone: true,
-  imports: [CardModule, ButtonModule, ProgressSpinnerModule],
+  imports: [CardModule, ButtonModule, ProgressSpinnerModule, RouterModule],
   templateUrl: './on-site-load.component.html',
   styleUrl: './on-site-load.component.css'
 })

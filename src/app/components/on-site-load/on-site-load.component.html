@@ -1,30 +1,31 @@
 @if (loading) {
-  <div class="spinner-container">
-    <p-progressSpinner ariaLabel="loading"></p-progressSpinner>
-  </div>
+<div class="spinner-container">
+  <p-progressSpinner ariaLabel="loading"></p-progressSpinner>
+</div>
 }
 
 @if (!loading) {
-  <div class="card-container">
-    <p-card>
-      <div class="text-center text-danger">
-        <h4>{{ configData.maintenanceMsg}}</h4>
+<div class="card-container">
+  <p-card>
+    <div class="text-center text-danger">
+      <h4>{{ configData.maintenanceMsg}}</h4>
+    </div>
+    <div class="custom-header">
+      <div class="text-center">
+        <img [src]="configData.siteLogo" alt="Site Logo" class="site-logo" />
       </div>
-      <div class="custom-header">
-        <div class="text-center">
-          <img [src]="configData.siteLogo" alt="Site Logo" class="site-logo" />
-        </div>
-        <div class="text-center">
-          <h6 class="fw-bold">{{ configData.siteTagLine }}</h6>
-        </div>
+      <div class="text-center">
+        <h6 class="fw-bold">{{ configData.siteTagLine }}</h6>
       </div>
-      <div class="gap-3 button-group mb-10">
-        <button [disabled]="configData.maintenanceMsg" pButton label="Sign In" (click)="onSignIn()" class="tms-btn"></button>
-        <button [disabled]="configData.maintenanceMsg" pButton label="Sign Up" (click)="onSignUp()" class="tms-btn"></button>
-      </div>
-      <div>
-        <span class="fw-bold">Version {{ configData.productVersion }}</span>
-      </div>
-    </p-card>
-  </div>
+    </div>
+    <div class="gap-3 button-group mb-10">
+      <button [disabled]="configData.maintenanceMsg" pButton label="Sign In" (click)="onSignIn()"
+        class="tms-btn"></button>
+        <button [routerLink]="['/create-account']" [disabled]="configData.maintenanceMsg" pButton label="Sign Up" class="tms-btn"></button>
+    </div>
+    <div>
+      <span class="fw-bold">Version {{ configData.productVersion }}</span>
+    </div>
+  </p-card>
+</div>
 }

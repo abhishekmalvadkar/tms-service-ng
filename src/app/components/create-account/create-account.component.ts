@@ -1,6 +1,7 @@
 import { formatCurrency } from '@angular/common';
 import { Component } from '@angular/core';
 import { Form, FormsModule, NgForm } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { FloatLabelModule } from 'primeng/floatlabel';
@@ -15,6 +16,8 @@ import { InputTextModule } from 'primeng/inputtext';
 })
 export class CreateAccountComponent {
 
+  showSignUpSuccessSection = false;
+
   model = {
     name: '',
     email: '',
@@ -22,6 +25,7 @@ export class CreateAccountComponent {
   };
 
   onSubmit() {
+    this.showSignUpSuccessSection = true
     console.log('Form Submitted!', this.model);
   }
 

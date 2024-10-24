@@ -1,23 +1,38 @@
+@if (showSignUpSuccessSection) {
+  <div class="card-container">
+    <p-card class="create-account-card text-center" header="Customer Registration">
+        <div>
+          <h4>You have registered successfully as a customer</h4>
+          <p class="text-success fw-bold">Please check your email to verify your account.</p>
+        </div>
+    </p-card>
+
+  </div>
+}
+
+@if (!showSignUpSuccessSection) {
 <div class="card-container">
   <p-card class="create-account-card" header="Create an account">
-    <form  (submit)="onSubmit()">
+    <form (submit)="onSubmit()">
       <div class="form-input-gap">
         <p-floatLabel>
-          <input id="name" type="text"  name="name" pInputText [(ngModel)]="model.name" class="form-control" required />
+          <input id="name" type="text" name="name" pInputText [(ngModel)]="model.name" class="form-control" required />
           <label for="name">Name</label>
         </p-floatLabel>
       </div>
 
       <div class="form-input-gap">
         <p-floatLabel>
-          <input id="email" name="email" type="email" pInputText [(ngModel)]="model.email" required class="form-control" />
+          <input id="email" name="email" type="email" pInputText [(ngModel)]="model.email" required
+            class="form-control" />
           <label for="email">Email address</label>
         </p-floatLabel>
       </div>
 
       <div class="form-input-gap">
         <p-floatLabel>
-          <input id="password" name="password" type="password" pInputText [(ngModel)]="model.password" class="form-control" required />
+          <input id="password" name="password" type="password" pInputText [(ngModel)]="model.password"
+            class="form-control" required />
           <label for="password">Create a password</label>
         </p-floatLabel>
       </div>
@@ -27,8 +42,9 @@
       </div>
     </form>
     <div class="text-center">
-        <h5>Already have an account? <a href="">Sign in</a></h5>
+      <h6>Already have an account? <a href="" class="text-decoration-none">Sign in</a></h6>
     </div>
   </p-card>
 
 </div>
+}
