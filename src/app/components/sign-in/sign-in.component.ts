@@ -4,11 +4,12 @@ import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [CardModule, FloatLabelModule, FormsModule, RouterModule, ButtonModule],
+  imports: [CardModule, FloatLabelModule, FormsModule, RouterModule, ButtonModule, InputTextModule],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })
