@@ -18,12 +18,12 @@
 .tms-btn-primary{
   background-color: #2C3E50;
   color: #fff;
-  border-color: #2C3E50;
+  border: none;
   line-height: normal;
 }
 
 .tms-btn{
-  padding: 5px 18px;
+  padding: 9px 20px;
 }
 
 
