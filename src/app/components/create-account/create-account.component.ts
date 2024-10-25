@@ -10,7 +10,7 @@ import { InputTextModule } from 'primeng/inputtext';
 @Component({
   selector: 'app-create-account',
   standalone: true,
-  imports: [CardModule, FormsModule, ButtonModule, FloatLabelModule, InputTextModule],
+  imports: [CardModule, FormsModule, ButtonModule, FloatLabelModule, InputTextModule, RouterModule],
   templateUrl: './create-account.component.html',
   styleUrl: './create-account.component.css'
 })
