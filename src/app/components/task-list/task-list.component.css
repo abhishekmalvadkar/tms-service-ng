@@ -1,0 +1,84 @@
+.task-list {
+  margin: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-card {
+  margin-bottom: 10px;
+  position: relative; /* Set position relative for absolute positioning of ellipsis */
+}
+
+.ellipsis {
+  cursor: pointer;
+  font-size: 24px; /* Adjust size as needed */
+  position: absolute;
+  right: 10px; /* Position to the right */
+  top: 10px; /* Position at the top of the card */
+}
+
+.actions {
+  display: flex;
+  flex-direction: column; /* Stack actions vertically */
+  background-color: white; /* Set white background */
+  box-shadow: none; /* Remove shadow if any */
+  position: absolute; /* Position it relative to the card */
+  right: 10px; /* Align with ellipsis */
+  top: 40px; /* Adjust as needed for spacing */
+  width: 150px; /* Set a small width */
+  z-index: 100; /* Ensure it's above other elements */
+  padding: 5px; /* Optional padding for better spacing */
+}
+
+.action-item {
+  margin-bottom: 5px; /* Space between buttons */
+}
+
+button {
+  width: 100%; /* Make buttons full width */
+  padding: 5px 0; /* Vertical padding */
+  border: none; /* Remove button borders */
+  background: none; /* Remove button background */
+  text-align: left; /* Align text to the left */
+}
+
+button:hover {
+  background-color: #f0f0f0; /* Optional hover effect */
+}
+
+
+
+
+
+.calendar-container {
+  position: relative;
+  z-index: 10; /* Keep it above other elements */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-task{
+  background-color: #2C3E50;
+  color: #fff;
+  padding: 6px;
+  text-align: center;
+}
+
+.create-task:hover{
+  background-color: #2C3E50;
+}
+
+
+
+
+
+/* Existing styles... */
+
