@@ -1,0 +1,11 @@
+<div class="sidebar" [ngClass]="{ 'open': isOpen }" (click)="closeSidebar()">
+  <div class="user-info" (click)="$event.stopPropagation()">
+    <h5>{{ username }} ({{ role }})</h5>
+    <p>Last logged in: {{ lastLoggedIn | date: 'short' }}</p>
+  </div>
+  <hr>
+  <ul class="menu">
+    <li [routerLink]="['/home']" >My Tasks</li>
+    <li>My Report</li>
+  </ul>
+</div>

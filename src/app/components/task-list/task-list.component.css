@@ -46,9 +46,6 @@ button {
   text-align: left; /* Align text to the left */
 }
 
-button:hover {
-  background-color: #f0f0f0; /* Optional hover effect */
-}
 
 
 
@@ -74,6 +71,10 @@ button:hover {
 
 .create-task:hover{
   background-color: #2C3E50;
+}
+
+.p-calendar .p-inputtext{
+  height: 100px !important;
 }
 
 

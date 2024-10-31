@@ -1,6 +1,7 @@
 import { HeaderComponent } from './../header/header.component';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-home',

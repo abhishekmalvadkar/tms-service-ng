@@ -15,12 +15,10 @@
     <div class="col-12 col-md-4 mb-2">
       <div class="calendar-container">
 
-    <p-calendar
-    placeholder="Select due date..."
-    [(ngModel)]="dueDateFilter"
-    [iconDisplay]="'input'"
-    [showIcon]="true"
-    inputId="icondisplay" />
+
+    <p-calendar placeholder="Select due date..." [(ngModel)]="dueDateFilter"
+        [showButtonBar]="true" [showIcon]="true" [iconDisplay]="'input'"
+    />
 
       </div>
     </div>
@@ -29,18 +27,15 @@
     </div>
   </div>
   <!-- Task Cards -->
-  <div *ngFor="let task of tasks" class="task-card">
+  <div  *ngFor="let task of tasks" class="task-card">
     <p-card>
-      <ng-template pTemplate="header">
-        <h3>{{ task.title }}</h3>
-      </ng-template>
       <div>
-        <p>{{ task.summary | slice:0:20 }}...</p>
-        <p [ngStyle]="{ color: task.status === 'Pending' ? 'red' : 'green' }">
-          Status: {{ task.status }}
+        <p class="fw-bold fs-5">{{ task.title }}<p>
+        <p class="fw-bold" [ngStyle]="{ color: task.status === 'Pending' ? 'red' : 'green' }">
+          {{ task.status }}
         </p>
-        <p [ngStyle]="{ color: 'red' }">
-          Due Date: {{ task.dueDate | date:'shortDate' }}
+        <p class="fw-bold" [ngStyle]="{ color: 'red' }">
+          Due : {{ task.dueDate | date }}
         </p>
       </div>
 

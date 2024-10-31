@@ -1,3 +1,6 @@
 <header class="tms-bg text-white tms-header">
-  <h1 class="tms-logo">TMS</h1>
+  <h1 class="tms-logo"><i (click)="toggleSidebar()" style="cursor: pointer;" class="pi pi-bars fs-5"></i>
+  <span class="m-2">TMS</span></h1>
+
+  <app-sidebar [isOpen]="isSidebarOpen" (close)="isSidebarOpen = false"></app-sidebar>
 </header>
