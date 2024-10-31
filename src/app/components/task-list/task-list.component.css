@@ -73,9 +73,14 @@ button {
   background-color: #2C3E50;
 }
 
-.p-calendar .p-inputtext{
-  height: 100px !important;
+
+::ng-deep .p-calendar{
+  width: 100%;
 }
+
+
+
+
 
 
 
