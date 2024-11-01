@@ -25,13 +25,25 @@
   display: flex;
   flex-direction: column; /* Stack actions vertically */
   background-color: white; /* Set white background */
-  box-shadow: none; /* Remove shadow if any */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
   position: absolute; /* Position it relative to the card */
   right: 10px; /* Align with ellipsis */
   top: 40px; /* Adjust as needed for spacing */
-  width: 150px; /* Set a small width */
+  width: 200px; /* Set a small width */
   z-index: 100; /* Ensure it's above other elements */
-  padding: 5px; /* Optional padding for better spacing */
+  padding: 10px; /* Optional padding for better spacing */
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .action-item {
