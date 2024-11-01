@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,6 +13,8 @@ export class SidebarComponent {
 
   @Input() isOpen: boolean = false; // Input property to control visibility
   @Output() close = new EventEmitter<void>(); // Emit close event
+
+  constructor(private router: Router) {}
 
   username: string = 'John Doe';
   role: string = 'Admin';
@@ -37,6 +39,11 @@ export class SidebarComponent {
      if (this.isOpen && sidebarElement && !sidebarElement.contains(target)) {
        this.closeSidebar();
      }
+   }
+
+   onLogout(){
+    localStorage.removeItem("TKN");
+    this.router.navigate(['sign-in']);
    }
 
 }

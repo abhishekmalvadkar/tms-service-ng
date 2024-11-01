@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { FloatLabelModule } from 'primeng/floatlabel';
@@ -20,8 +20,12 @@ export class SignInComponent {
     password: '',
   };
 
+  constructor(private router: Router) {}
+
   onSignIn() {
     console.log('Form Submitted!', this.model);
+    localStorage.setItem("TKN", "123");
+    this.router.navigate(['home']);
   }
 
 }
