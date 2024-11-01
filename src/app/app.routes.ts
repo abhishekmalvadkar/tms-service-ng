@@ -6,6 +6,7 @@ import { VerifyAccountComponent } from './components/verify-account/verify-accou
 import { HomeComponent } from './components/home/home.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { MyReportComponent } from './components/my-report/my-report.component';
+import { CreateTaskComponent } from './components/create-task/create-task.component';
 
 
 export const routes: Routes = [
@@ -18,7 +19,8 @@ export const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: '', component: TaskListComponent }, // Load TaskListComponent by default
-      { path: 'my-report', component:  MyReportComponent }
+      { path: 'my-report', component:  MyReportComponent },
+      { path: 'create-task', component:  CreateTaskComponent }
       // Add more child routes here if needed
     ]
   },

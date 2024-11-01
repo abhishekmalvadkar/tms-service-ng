@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
@@ -16,7 +17,7 @@ interface Task {
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [CalendarModule, FormsModule, CommonModule, CardModule,ButtonModule],
+  imports: [CalendarModule, FormsModule, CommonModule, CardModule,ButtonModule, RouterModule],
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.css'
 })

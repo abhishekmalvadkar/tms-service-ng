@@ -1,0 +1,27 @@
+<div class="card-container mt-5">
+  <p-card title="Create Task" styleClass="p-m-3" header="Create task">
+    <div class="p-fluid">
+      <div class="p-field form-input-gap">
+        <label for="title">Title</label>
+        <input id="title" type="text" pInputText [(ngModel)]="title" class="form-control" />
+      </div>
+
+      <div class="p-field form-input-gap">
+        <label for="description">Description</label>
+        <p-editor [(ngModel)]="description"></p-editor>
+      </div>
+
+      <div class="p-field form-input-gap calendar-container">
+        <label for="dueDate">Due Date</label>
+        <p-calendar placeholder="Select due date..." [(ngModel)]="dueDate"
+        [showButtonBar]="true" [showIcon]="true" [iconDisplay]="'input'"
+    />
+      </div>
+
+      <div class="p-field form-input-gap">
+        <button pButton class="tms-btn-primary" label="Create Task" (click)="createTask()"></button>
+      </div>
+    </div>
+  </p-card>
+
+</div>
