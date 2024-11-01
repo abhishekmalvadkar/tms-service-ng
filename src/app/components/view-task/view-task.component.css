@@ -1,0 +1,48 @@
+/* center-card.component.css */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  position: relative;
+}
+
+.create-account-card{
+  width: 700px;
+}
+
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-header{
+  margin-bottom: 40px;
+}
+
+.calendar-container {
+  position: relative;
+  z-index: 10; /* Keep it above other elements */
+  width: 100%; /* Ensure it takes full width */
+}
+
+::ng-deep .p-calendar{
+  width: 100%;
+  height: 37px;
+}
+
+::ng-deep .p-editor {
+  height: 300px; /* Set your desired height */
+}
+
+::ng-deep .p-editor-content {
+  min-height: 250px; /* Set a minimum height for the content area */
+}
+
+label{
+  font-weight: bold;
+}
+
+
+

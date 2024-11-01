@@ -56,7 +56,7 @@
           <button (click)="markAsCompleted(task)">Mark as Completed</button>
         </div>
         <div class="action-item">
-          <button (click)="viewTask(task)">View</button>
+          <button [routerLink]="['/home/view-task']" (click)="viewTask(task)">View</button>
         </div>
         <div class="action-item">
           <button (click)="removeTask(task)">Remove</button>

@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { MyReportComponent } from './components/my-report/my-report.component';
 import { CreateTaskComponent } from './components/create-task/create-task.component';
+import { ViewTaskComponent } from './components/view-task/view-task.component';
 
 
 export const routes: Routes = [
@@ -20,7 +21,8 @@ export const routes: Routes = [
     children: [
       { path: '', component: TaskListComponent }, // Load TaskListComponent by default
       { path: 'my-report', component:  MyReportComponent },
-      { path: 'create-task', component:  CreateTaskComponent }
+      { path: 'create-task', component:  CreateTaskComponent },
+      { path: 'view-task', component:  ViewTaskComponent },
       // Add more child routes here if needed
     ]
   },
