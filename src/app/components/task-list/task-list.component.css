@@ -91,6 +91,40 @@ button {
   height: 37px;
 }
 
+::ng-deep .p-confirm-dialog-reject{
+  margin-right: 20px;
+}
+
+::ng-deep .p-dialog-mask{
+  z-index: 100;
+}
+
+.dialog-mask {
+  background-color: rgb(0 0 0 / 60%);
+  backdrop-filter: blur(1px);
+}
+
+/* app.component.css */
+.hidden-overlay {
+  visibility: hidden;
+}
+
+.visible-overlay {
+  visibility: visible;
+}
+
+::ng-deep .p-confirm-dialog .p-confirm-dialog-accept {
+  background-color: #2C3E50;
+  color: white; /* Change text color */
+  border: none;
+}
+
+::ng-deep .p-confirm-dialog .p-confirm-dialog-reject {
+  background-color: #2C3E50;
+  border: none;
+  color: white; /* Change text color */
+}
+
 
 
 

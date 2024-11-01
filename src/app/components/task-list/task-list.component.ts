@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ConfirmationService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
 
 interface Task {
   title: string;
@@ -17,9 +19,10 @@ interface Task {
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [CalendarModule, FormsModule, CommonModule, CardModule,ButtonModule, RouterModule],
+  imports: [CalendarModule, FormsModule, CommonModule, CardModule,ButtonModule, RouterModule,ConfirmDialogModule],
   templateUrl: './task-list.component.html',
-  styleUrl: './task-list.component.css'
+  styleUrl: './task-list.component.css',
+  providers:[ConfirmationService]
 })
 export class TaskListComponent {
 
@@ -30,9 +33,15 @@ export class TaskListComponent {
     // Add more tasks as needed
   ];
 
+  constructor(private confirmationService: ConfirmationService,
+    private renderer: Renderer2, private el: ElementRef
+  ) {}
+
+
   searchText: string = '';
   selectedStatus: string = '';
   dueDateFilter: Date | null = null; // for filtering based on due date
+  display: boolean = false;
 
   markAsCompleted(task: Task) {
     task.status = 'Completed';
@@ -79,6 +88,49 @@ export class TaskListComponent {
     console.log('New Task button clicked');
     // You can implement a modal or a redirect to a task creation page here
   }
+
+  confirmMarkAsCompleted(task: Task) {
+    this.applyOverlayStyles(true);
+    this.confirmationService.confirm({
+      message: 'Are you sure you want to mark this task as completed?',
+      accept: () => {
+        this.markAsCompleted(task);
+        this.applyOverlayStyles(false);
+      },
+      reject: () => {
+        // Optional: Logic if the user cancels the action
+        this.applyOverlayStyles(false);
+      }
+    });
+  }
+
+  confirmRemoveTask(task: Task) {
+    this.applyOverlayStyles(true);
+    this.confirmationService.confirm({
+      message: 'Are you sure you want to remove this task?',
+      accept: () => {
+        this.removeTask(task);
+        this.applyOverlayStyles(false);
+      },
+      reject: () => {
+        // Optional: Logic if the user cancels the action
+        this.applyOverlayStyles(false);
+      }
+    });
+  }
+
+  private applyOverlayStyles(isVisible: boolean) {
+    const overlay = this.el.nativeElement.querySelector('.p-dialog-mask');
+    if(overlay){
+    if (isVisible) {
+      this.renderer.setStyle(overlay, 'visibility', 'visible');
+    } else {
+      this.renderer.setStyle(overlay, 'visibility', 'hidden');
+    }
+  }
+  }
+
+
 
 
 }

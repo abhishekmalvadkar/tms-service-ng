@@ -53,16 +53,22 @@
       <!-- Actions Section -->
       <div *ngIf="task.showActions" class="actions">
         <div *ngIf="task.status != 'Completed'" class="action-item">
-          <button (click)="markAsCompleted(task)">Mark as Completed</button>
+          <button (click)="confirmMarkAsCompleted(task)">Mark as Completed</button>
         </div>
         <div class="action-item">
           <button [routerLink]="['/home/view-task']" (click)="viewTask(task)">View</button>
         </div>
         <div class="action-item">
-          <button (click)="removeTask(task)">Remove</button>
+          <button (click)="confirmRemoveTask(task)">Remove</button>
         </div>
       </div>
 
     </p-card>
   </div>
 </div>
+
+<p-confirmDialog [position]="'top'" [header]="'Confirmation'"
+icon="pi pi-exclamation-triangle"
+>
+></p-confirmDialog>
+
