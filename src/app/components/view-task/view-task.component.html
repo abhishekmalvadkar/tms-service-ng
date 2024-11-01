@@ -45,6 +45,23 @@
       </div>
 
       <div class="p-field">
+        <label for="status">Status</label>
+        <div class="p-inputgroup">
+          <select class="form-select" [(ngModel)]="tempValue" *ngIf="editingField === 'status'">
+            <option value="">All Statuses</option>
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+          </select>
+          <div class="col-10 col-md-10" *ngIf="editingField !== 'status'">{{ status }}</div>
+          <div class="col-md-2">
+            <button pButton class="tms-btn-primary" icon="pi pi-pencil" (click)="editField('status')" *ngIf="editingField !== 'status'"></button>
+          <button pButton class="tms-btn-primary" icon="pi pi-check" (click)="saveField('status')" *ngIf="editingField === 'status'"></button>
+          <button pButton class="tms-btn-primary" icon="pi pi-times" (click)="cancelEdit()" *ngIf="editingField === 'status'"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-field">
         <label for="dueDate">Due Date</label>
         <div class="p-inputgroup">
           <p-calendar
@@ -66,22 +83,7 @@
         </div>
       </div>
 
-      <div class="p-field">
-        <label for="status">Status</label>
-        <div class="p-inputgroup">
-          <select class="form-select" [(ngModel)]="tempValue" *ngIf="editingField === 'status'">
-            <option value="">All Statuses</option>
-            <option value="Pending">Pending</option>
-            <option value="Completed">Completed</option>
-          </select>
-          <div class="col-10 col-md-10" *ngIf="editingField !== 'status'">{{ status }}</div>
-          <div class="col-md-2">
-            <button pButton class="tms-btn-primary" icon="pi pi-pencil" (click)="editField('status')" *ngIf="editingField !== 'status'"></button>
-          <button pButton class="tms-btn-primary" icon="pi pi-check" (click)="saveField('status')" *ngIf="editingField === 'status'"></button>
-          <button pButton class="tms-btn-primary" icon="pi pi-times" (click)="cancelEdit()" *ngIf="editingField === 'status'"></button>
-          </div>
-        </div>
-      </div>
+
     </div>
   </p-card>
 
